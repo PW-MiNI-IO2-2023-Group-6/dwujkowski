@@ -17,7 +17,7 @@ namespace TDDWorkshop
             if (str.StartsWith("//") && str[3] == '\n')
                valuesStr = str[4..].Split(',', '\n', str[2]);
             else
-                valuesStr = str.Split(',', '\n');
+                valuesStr = str.Split('\n');
             int sum = 0;
             foreach (string strVal in valuesStr)
                 if (int.TryParse(strVal, out var val))
