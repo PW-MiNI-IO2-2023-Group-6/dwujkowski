@@ -8,6 +8,9 @@ namespace TDDWorkshop
 {
     public class StringCalculator
     {
+        /// <summary>
+        /// Calculates sum
+        /// </summary>
         public static int Calculate(string str)
         {
             if (string.IsNullOrEmpty(str))
@@ -18,6 +21,7 @@ namespace TDDWorkshop
                valuesStr = str[4..].Split(',', '\n', str[2]);
             else
                 valuesStr = str.Split(',', '\n');
+
             int sum = 0;
             foreach (string strVal in valuesStr)
                 if (int.TryParse(strVal, out var val))
